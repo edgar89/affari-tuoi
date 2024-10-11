@@ -1,6 +1,20 @@
-namespace AffariTuoi
+﻿using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace AffariTuoiWPF
 {
-    public partial class MainForm : Form
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
         public class BoxInfo
         {
@@ -21,7 +35,7 @@ namespace AffariTuoi
 
         private Dictionary<Button, BoxInfo> boxes;
 
-        public MainForm()
+        public MainWindow()
         {
             InitializeComponent();
 
@@ -48,11 +62,9 @@ namespace AffariTuoi
                 { box200000, new BoxInfo(200000) },
                 { box300000, new BoxInfo(300000) }
             };
-
-            UpdateAll();
         }
 
-        private void OnBoxClicked(object sender, EventArgs e)
+        private void OnButtonClick(object sender, RoutedEventArgs e)
         {
             if (sender is not Button)
                 return;
@@ -63,7 +75,7 @@ namespace AffariTuoi
             UpdateAll();
         }
 
-        private void OnOffer(object sender, EventArgs e)
+        private void OnOffer(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             DoMathStuff();
         }
@@ -82,22 +94,22 @@ namespace AffariTuoi
                 {
                     if (boxes[b].IsPresent)
                     {
-                        b.Location = new Point(0, b.Location.Y);
+                        b.Margin = new Thickness(0, 6, 0, 6);
                     }
                     else
                     {
-                        b.Location = new Point(-145, b.Location.Y);
+                        b.Margin = new Thickness(-85, 6, 0, 6);
                     }
                 }
                 else
                 {
                     if (boxes[b].IsPresent)
                     {
-                        b.Location = new Point(578, b.Location.Y);
+                        b.Margin = new Thickness(0, 6, 0, 6);
                     }
                     else
                     {
-                        b.Location = new Point(735, b.Location.Y);
+                        b.Margin = new Thickness(0, 6, -85, 6);
                     }
                 }
             }
@@ -105,17 +117,19 @@ namespace AffariTuoi
 
         private void DoMathStuff()
         {
+            if (boxes == null)
+                return; // on init
             IEnumerable<BoxInfo> boxInPlay = boxes.Values.Where(b => b.IsPresent);
 
             double avg = boxInPlay.Select(b => b.Value).Average();
             double sigma = Math.Sqrt(boxInPlay.Select(b => Math.Pow(b.Value - avg, 2)).Sum() / boxInPlay.Count());
-            double ratioToAvg = (double)offerNumericUpDown.Value / avg;
+            double ratioToAvg = (double)offerNumericUpDown.Value! / avg;
             double sigmaCoeff = sigma / avg;
             double goodOffer = sigmaCoeff < 1d ? avg : avg / sigmaCoeff;
 
             string fmt = "0";
             string fmtDec = "0.00";
-            string fmtEur = fmt + " �";
+            string fmtEur = fmt + " €";
             string fmtPerc = fmtDec + " %";
 
             boxInPlayTextBox.Text = boxInPlay.Count().ToString(fmt);
@@ -124,6 +138,6 @@ namespace AffariTuoi
             sigmaCoeffTextBox.Text = sigmaCoeff.ToString(fmtDec);
             goodOfferTextBox.Text = goodOffer.ToString(fmtEur);
             offerGoodnessTextBox.Text = ratioToAvg.ToString(fmtPerc);
-        }        
+        }
     }
 }

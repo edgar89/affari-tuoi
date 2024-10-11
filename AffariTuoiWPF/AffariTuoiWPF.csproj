@@ -4,13 +4,24 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
     <ApplicationIcon>box.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="box.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="box.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="box.png" />
+  </ItemGroup>
 </Project>
