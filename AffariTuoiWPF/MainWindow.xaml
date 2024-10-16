@@ -17,16 +17,106 @@
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Vertical" Grid.Column="0">
             <Label Height="6"/>
-            <local:ButtonEx x:Name="box0" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="0 €" Background="#ADD8E6" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box1" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="1 €" Background="#87CEEB" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box5" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="5 €" Background="#87CEFA" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box10" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="10 €" Background="#6495ED" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box20" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="20 €" Background="#4682B4" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box50" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="50 €" Background="#5F9EA0" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box75" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="75 €" Background="#4169E1" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box100" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="100 €" Background="#0000FF" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box200" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="200 €" Background="#0000CD" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box500" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="500 €" Background="#00008B" HoverBackground="#BCD8E6" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
+            <local:ButtonEx x:Name="box0" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="0 €" HoverBackground="#047FDE" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#87CEEB" Offset="0"/>
+                        <GradientStop Color="#047FDE" Offset="0.3"/>
+                        <GradientStop Color="#047FDE" Offset="0.6"/>
+                        <GradientStop Color="#87CEEB" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box1" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="1 €" HoverBackground="#047FDE" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#87CEEB" Offset="0"/>
+                        <GradientStop Color="#047FDE" Offset="0.3"/>
+                        <GradientStop Color="#047FDE" Offset="0.6"/>
+                        <GradientStop Color="#87CEEB" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box5" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="5 €" HoverBackground="#047FDE" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#87CEEB" Offset="0"/>
+                        <GradientStop Color="#047FDE" Offset="0.3"/>
+                        <GradientStop Color="#047FDE" Offset="0.6"/>
+                        <GradientStop Color="#87CEEB" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box10" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="10 €" HoverBackground="#047FDE" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#87CEEB" Offset="0"/>
+                        <GradientStop Color="#047FDE" Offset="0.3"/>
+                        <GradientStop Color="#047FDE" Offset="0.6"/>
+                        <GradientStop Color="#87CEEB" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box20" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="20 €" HoverBackground="#047FDE" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#87CEEB" Offset="0"/>
+                        <GradientStop Color="#047FDE" Offset="0.3"/>
+                        <GradientStop Color="#047FDE" Offset="0.6"/>
+                        <GradientStop Color="#87CEEB" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box50" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="50 €" HoverBackground="#0534C6" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#3399FD" Offset="0"/>
+                        <GradientStop Color="#0534C6" Offset="0.3"/>
+                        <GradientStop Color="#0534C6" Offset="0.6"/>
+                        <GradientStop Color="#3399FD" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box75" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="75 €" HoverBackground="#0534C6" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#3399FD" Offset="0"/>
+                        <GradientStop Color="#0534C6" Offset="0.3"/>
+                        <GradientStop Color="#0534C6" Offset="0.6"/>
+                        <GradientStop Color="#3399FD" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box100" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="100 €" HoverBackground="#0534C6" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#3399FD" Offset="0"/>
+                        <GradientStop Color="#0534C6" Offset="0.3"/>
+                        <GradientStop Color="#0534C6" Offset="0.6"/>
+                        <GradientStop Color="#3399FD" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box200" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="200 €"  HoverBackground="#0534C6" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#3399FD" Offset="0"/>
+                        <GradientStop Color="#0534C6" Offset="0.3"/>
+                        <GradientStop Color="#0534C6" Offset="0.6"/>
+                        <GradientStop Color="#3399FD" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box500" HorizontalAlignment="Left" Width="150" Margin="0,6,0,6" Height="30" Content="500 €" HoverBackground="#0534C6" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#3399FD" Offset="0"/>
+                        <GradientStop Color="#0534C6" Offset="0.3"/>
+                        <GradientStop Color="#0534C6" Offset="0.6"/>
+                        <GradientStop Color="#3399FD" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
         </StackPanel>
 
         <Grid Grid.Column="1" Margin="60,12" >
@@ -56,16 +146,106 @@
 
         <StackPanel Orientation="Vertical" Grid.Column="2">
             <Label Height="6"/>
-            <local:ButtonEx x:Name="box5000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="5000 €" Background="#FFB6C1" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box10000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="10000 €" Background="#FF69B4" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box15000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="15000 €" Background="#FF1493" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box20000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="20000 €" Background="#DB7093" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box30000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="30000 €" Background="#FF6347" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box50000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="50000 €" Background="#FF4500" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box75000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="75000 €" Background="#FF0000" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box100000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="100000 €" Background="#DC143C" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box200000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="200000 €" Background="#B22222" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
-            <local:ButtonEx x:Name="box300000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="300000 €" Background="#8B0000" HoverBackground="#FFD1DC" Foreground="White" FontWeight="Bold" Click="OnButtonClick"/>
+            <local:ButtonEx x:Name="box5000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="5000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box10000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="10000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box15000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="15000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box20000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="20000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box30000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="30000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box50000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="50000 €"  HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box75000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="75000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box100000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="100000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box200000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="200000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
+            <local:ButtonEx x:Name="box300000" HorizontalAlignment="Right" Width="150" Margin="0,6,0,6" Height="30" Content="300000 €" HoverBackground="#E32211" PressedBackground="PaleVioletRed" Foreground="White" FontWeight="Bold" Click="OnButtonClick">
+                <local:ButtonEx.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#C64D53" Offset="0"/>
+                        <GradientStop Color="#E32211" Offset="0.3"/>
+                        <GradientStop Color="#E32211" Offset="0.6"/>
+                        <GradientStop Color="#C64D53" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ButtonEx.Background>
+            </local:ButtonEx>
         </StackPanel>
     </Grid>
 </Window>

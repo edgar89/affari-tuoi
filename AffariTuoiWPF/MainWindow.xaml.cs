@@ -1,13 +1,5 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AffariTuoiWPF
 {
@@ -16,25 +8,52 @@ namespace AffariTuoiWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public class BoxInfo
+        /// <summary>
+        /// Utility class, contains information about a box in play
+        /// </summary>
+        /// <remarks>
+        /// Creates a new instance of this class
+        /// </remarks>
+        /// <param name="value">Value of the box</param>
+        public sealed class BoxInfo(int value)
         {
+            /// <summary>
+            /// Enumerates which color a box can have
+            /// </summary>
             public enum BoxColor
             {
-                RED, BLUE
+                /// <summary>
+                /// Red box, prizes &gte; 5000€
+                /// </summary>
+                RED,
+                /// <summary>
+                /// Blue box, prizes &lte; 5000€
+                /// </summary>
+                BLUE
             }
-            public bool IsPresent { get; set; }
-            public int Value { get; private set; }
-            public BoxColor Color => Value < 5000 ? BoxColor.BLUE : BoxColor.RED;
 
-            public BoxInfo(int value)
-            {
-                IsPresent = true;
-                Value = value;
-            }
+            /// <summary>
+            /// Indicates whether or not this box is still in play
+            /// </summary>
+            public bool IsPresent { get; set; } = true;
+            /// <summary>
+            /// The value of this box
+            /// </summary>
+            public int Value { get; private set; } = value;
+            /// <summary>
+            /// The color of the box. <see cref="BoxColor"/>
+            /// </summary>
+            public BoxColor Color => Value < 5000 ? BoxColor.BLUE : BoxColor.RED;
         }
 
-        private Dictionary<Button, BoxInfo> boxes;
+        /// <summary>
+        /// The boxes
+        /// </summary>
+        private readonly Dictionary<Button, BoxInfo> boxes;
 
+        /// <summary>
+        /// Creates a new instance of this class
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -62,8 +81,15 @@ namespace AffariTuoiWPF
                 { box200000, new BoxInfo(200000) },
                 { box300000, new BoxInfo(300000) }
             };
+
+            UpdateAll();
         }
 
+        /// <summary>
+        /// When the user clicks one of the button linked to a box
+        /// </summary>
+        /// <param name="sender">Object which raised the event</param>
+        /// <param name="e">Event information</param>
         private void OnButtonClick(object sender, RoutedEventArgs e)
         {
             if (sender is not Button)
@@ -75,17 +101,28 @@ namespace AffariTuoiWPF
             UpdateAll();
         }
 
+        /// <summary>
+        /// When the value of the offer changes
+        /// </summary>
+        /// <param name="sender">Object which raised the event</param>
+        /// <param name="e">Event information</param>
         private void OnOffer(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             DoMathStuff();
         }
 
+        /// <summary>
+        /// Updates both UI graphics and underlying math values
+        /// </summary>
         private void UpdateAll()
         {
             UpdateUI();
             DoMathStuff();
         }
 
+        /// <summary>
+        /// Updates UI graphics
+        /// </summary>
         private void UpdateUI()
         {
             foreach (Button b in boxes.Keys)
@@ -95,10 +132,12 @@ namespace AffariTuoiWPF
                     if (boxes[b].IsPresent)
                     {
                         b.Margin = new Thickness(0, 6, 0, 6);
+                        b.Content = boxes[b].Value.ToString("0 €");
                     }
                     else
                     {
                         b.Margin = new Thickness(-85, 6, 0, 6);
+                        b.Content = "";
                     }
                 }
                 else
@@ -106,15 +145,20 @@ namespace AffariTuoiWPF
                     if (boxes[b].IsPresent)
                     {
                         b.Margin = new Thickness(0, 6, 0, 6);
+                        b.Content = boxes[b].Value.ToString("0 €");
                     }
                     else
                     {
                         b.Margin = new Thickness(0, 6, -85, 6);
+                        b.Content = "";
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Updates underlying math values
+        /// </summary>
         private void DoMathStuff()
         {
             if (boxes == null)
